@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Elsie+Swash+Caps');/*inport code from online*/
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script');
+/*This is the CSS stylesheet */
+
+/*CSS Syntax
+selector {
+  property: value;
+  property: value;
+}
+*/
+
+/*Type selector*/
+p { /*selects all p tags*/
+  font-size: 16px;
+  /*px always the same, pt dependant on browser, 16px = 1em */
+  line-height: 1.5em;
+}
+figcaption {/*works on the captions*/
+  /* font-weight: narmal;
+  font-size: 0.75em;
+  line-height: 1.5em;
+  font-family: Georgia, "New Times Roman", serif; /*2 following fonts are fallbacks*/
+  font: normal 0.75em/1.5em 'Clicker Script', cursive; /*short hand for whats above*/
+  color: rgb(143,06,38); /*blue = *hexidecimal --> #0000ff */
+  text-align: right;
+}/*digital color meter in mac os searchbar/ tells RGB value for color u mouse over*/
+
+/* Class Selectors can be applied to many diferent types of elements*/
+
+.name-class {
+  font: bold 2.6em 'Elsie Swash Caps', cursive;
+  color: white;
+  text-shadow: 0em 2px 3px #000/*1st value=horizonatl offset; 2nd = vertical; blure radious; color*/
+}/*add class by pasted class atribute*/
+/*class="name-class" added to h2 line 37 on real-estate=listings page*/
+
+/*ID selector- apply to one unique element per page */
+/*make box for logo on index page*/
+#logo {
+  background-color: aqua;
+}
+/*Decendent Selectors- styles decenents within a given tag*/
+#logo h1{ /*only style h1 if they're inside element with id = logo */
+  font-family: 'Clicker Script', cursive;
+}
+#logo h2{
+font-family: 'Elsie Swash Caps', cursive;
+}
+/*Psuedo Selectors - select elements baste on relationship or event state*/
+/*styling certain links for when pressed and before*/
+#details a:link, #details a:visited {/*Decendent selector (#details a); Psuedo Selector (:link)*/
+ color: black;
+ text-decoration: none;
+}/*combines states with a comma*/
+
+#details a:hover {
+  color: black;
+  text-decoration: underline;
+}
+#details a:active {
+  color: red;
+}
